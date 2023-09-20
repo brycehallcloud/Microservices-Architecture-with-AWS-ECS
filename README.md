@@ -117,6 +117,60 @@ Step 3: Name your container "my-image", copy and paste your repository URL in th
 <img src="https://github.com/brycehallcloud/Microservices-Architecture-with-AWS-ECS/assets/144934324/1ecc3e7b-a0f5-4443-aa0a-2bdbd98553fb"/>
 <br />
 
+<p align="center">
+Lab 1.6 ECS Cluster Service <br/>
+
+<p align="center">
+Step 1: Navigate to the Navigate to the "Clusters" section and click on your cluster you previously created. Click on "services" and click "create". Choose "capacity provider strategy", then select "Use cluster default".       <br/>
+<img src="https://github.com/brycehallcloud/Microservices-Architecture-with-AWS-ECS/assets/144934324/1f7e45c2-b033-40ba-b194-10b10838add4" alt="Disk Sanitization Steps"/>
+<br /> 
+
+<p align="center">
+Step 2: For application type select "service". On "Family", select your task definition that you created, service name use "my-microservice-task", and for service type select "Replica".       <br/>
+<img src="https://github.com/brycehallcloud/Microservices-Architecture-with-AWS-ECS/assets/144934324/fb067f86-3e21-428e-b1f9-994914231291" alt="Disk Sanitization Steps"/>
+<br /> 
+
+<p align="center">
+Step 3: For "desired tasks" select "2", Min running tasks % select "100" and for Max running tasks select "200".       <br/>
+<img src="https://github.com/brycehallcloud/Microservices-Architecture-with-AWS-ECS/assets/144934324/aa808569-ef08-4f48-879d-829ed929f733" alt="Disk Sanitization Steps"/>
+<br />  
+
+<p align="center">
+Step 4: Next select "Application Load Balancer" for your "Load balancer type". Under load balancer select the load balancer you created. Next choose your container to load balance. Select "Use an existing listener".       <br/>
+<img src="https://github.com/brycehallcloud/Microservices-Architecture-with-AWS-ECS/assets/144934324/c2445b08-f981-4754-94e6-6de2275823a0" alt="Disk Sanitization Steps"/>
+<br /> 
+
+<p align="center">
+Step 5: Next you will select "Use an existing target group" and name your target group "my-target-group". Next use "/health" for the health check path and use HTTP for your Health check protocol.       <br/>
+<img src="https://github.com/brycehallcloud/Microservices-Architecture-with-AWS-ECS/assets/144934324/89c8e5b0-20e1-4295-aa21-b9c2bec40180" alt="Disk Sanitization Steps"/>
+<br /> 
+
+<p align="center">
+Step 6: Select "Use service auto scaling and select "2" for Minimum number of tasks and select "10" for Maximum number of tasks. Then select "Target tracking" for your Scaling policy type.      <br/>
+<img src="https://github.com/brycehallcloud/Microservices-Architecture-with-AWS-ECS/assets/144934324/f978a3f1-4c45-4f27-b42a-e0ce09b8acbc" alt="Disk Sanitization Steps"/>
+<br /> 
+
+<p align="center">
+Step 7: For policy name choose "cpu-tracking-policy", ECS Service metric select "ECSServiceAverageCPUUtilization, Target value select "50", and for Scale-out cooldown period and Scale-in cooldown period select "300". Then scroll down to the bottom and select "create".      <br/>
+<img src="https://github.com/brycehallcloud/Microservices-Architecture-with-AWS-ECS/assets/144934324/1318f7bd-778e-4345-b623-8a9b065d9988" alt="Disk Sanitization Steps"/>
+<br />
+
+<p align="center">
+Conclusion <br/>
+
+<p align="center">
+After following these steps you should have created an ECS Cluster with two instances which will contain the services deployed. Created a Load Balancer to have a single entry point and redirect all the request to all your existing services. Create a Task Definition for your microservice. Deploy a microservice in the cluster specifying the rollout strategy. And last, created Autoscaling Rules for your cluster and your service. <br/>
+
+
+
+
+
+
+
+ 
+
+
+
 
 
 
