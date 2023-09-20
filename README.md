@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-In this lab I will show how to deploy a microservices architecture to AWS ECS. Create an ECS cluster with two instances which will contain the services deployed. Create a load balancer to have a single entry point and redirect all the request to all my existing services. Create a task definition for my micro service with the latest version from a Docker image. Deploy a microservice in the cluster specifying the rollout strategy. And last, created autoscaling rules for my cluster and my service.
+In this lab I will show how to deploy a microservices architecture to AWS ECS. Create an ECS cluster with two instances which will contain the services deployed. Create a load balancer to have a single entry point and redirect all the request to all existing services. Create a task definition for my micro service with the latest version from a Docker image. Deploy a microservice in the cluster specifying the rollout strategy. And last, created autoscaling rules for my cluster and my service.
 <br />
 
 
